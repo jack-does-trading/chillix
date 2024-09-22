@@ -1,0 +1,572 @@
+:root {
+    --one: #780000;
+    --two: #c1121f;
+    --three: #fdf0d5;
+    --four: #003049;
+    --five: #669bbc;
+}
+
+
+
+
+body {
+  font-family: 'fine', sans-serif; 
+}
+
+
+body {
+    background-color: rgba(0,0,0,0.9) !important;
+    color: var(--three) !important;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    flex-wrap: nowrap !important;
+}
+
+.navbar .imgWrapper {
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar .imgWrapper img {
+    height: 100%;
+    width: 150px; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+.logo {
+    margin-left: 20px; 
+}
+
+.navbar .navi {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar .navi .custom-button {
+    border-radius: 20%;
+    font-size: 16px !important;
+    text-transform: none;
+}
+
+.navbar .account .search-form{
+  background-color: transparent !important;
+}
+
+.navbar .account .search-form input{
+  border: 2px solid var(--two);
+  border-radius: 10px;
+  background-color: transparent !important;
+  color: var(--five);
+  margin-right: 10px;
+  
+}
+
+.custom-button {
+    border-radius: 50px;
+    padding: 10px 20px; 
+    background-color: #333; 
+    color: #fff; 
+    border: 1px solid #666; 
+    overflow: hidden; 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.custom-button:hover {
+    background-color: #444; 
+}
+
+.navbar .navi .custom-button:hover {
+    color: var(--three);
+    background-color: var(--two);
+}
+.navbar .account .search svg{
+    font-size: 25px !important;
+}
+.navbar .account-logo {
+    padding: 0;
+    border: 0;
+    min-width: auto;
+}
+
+.css-1d6wzja-MuiButton-startIcon {
+    margin: 0 !important;
+}
+
+.navbar .account-logo svg {
+    font-size: 30px;
+}
+
+.navbar .account-logo svg:hover {
+    color: var(--two);
+}
+
+.navbar .account {
+    width: calc(30% - 150px);
+    display: flex;
+    justify-content: center;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative !important;
+    margin-top: -70px; 
+    overflow: hidden;
+}
+
+.carousel-item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-item img,
+.carousel-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item img {
+    z-index: 1;
+}
+
+.carousel-item video {
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-caption {
+    z-index: 3;
+}
+
+/* Additional styling for Swiper carousel */
+/* General Swiper styles */
+.swiper, .swiper-viewed {
+    width: 97%;
+    height: 350px; /* Adjust the height as needed */
+    position: relative; /* Position relative for correct positioning of pagination and navigation buttons */
+  }
+  
+  .swiper-wrapper, .swiper-viewed .swiper-wrapper {
+    display: flex; /* Ensure slides are displayed in a row */
+  }
+  
+  .swiper-slide, .swiper-viewed .swiper-slide {
+    width: 20% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Background color for slides */
+  }
+
+  .swiper-slide button{
+    position: absolute !important;
+    bottom: 10px ;
+    left: 5px ;
+    z-index: 1000;
+  }
+  
+  /* Pagination */
+  .swiper-pagination, .swiper-pagination-viewed {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .swiper-pagination-bullet, .swiper-pagination-viewed .swiper-pagination-bullet {
+    background: var(--two) !important; /* Customize pagination bullet color */
+  }
+  
+  /* Navigation Buttons */
+  .swiper-button-prev, .swiper-button-next, .swiper-button-prev-viewed, .swiper-button-next-viewed {
+    color: var(--two) !important; /* Customize arrow button color */
+    z-index: 1000; /* Ensure buttons are above other content */
+  }
+  
+  /* Scrollbar */
+  .swiper-scrollbar, .swiper-scrollbar-viewed {
+    background: var(--two) !important; /* Customize scrollbar color */
+  }
+  
+  /* Thumb styles */
+  .thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Add this line */
+  }
+  
+  .thumb__image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: opacity 0.3s ease-in-out; /* Smooth opacity transition */
+  }
+
+  .thumb .thumb__image button {
+    position: absolute !important;
+    bottom: 1px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    z-index: 1000;
+  }
+  
+  .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .thumb-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(90deg); /* Initial position and rotation */
+    width: 100%; /* Change from 80% to 100% */
+    height: 100%; /* Change from 80% to 100% */
+    padding: 10px;
+    box-sizing: border-box; /* Add this line */
+    color: white !important;
+    text-align: center;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition for opacity and transform */
+    transform-style: preserve-3d; /* Preserve 3D space for rotation */
+    overflow: hidden;
+  }
+  
+  .thumb-info h5 , .thumb-info p {
+    opacity: 1;
+    color: white !important;
+    margin: 0;
+    text-align: center;
+    overflow: hidden !important;
+  }
+  
+  .thumb-info p {
+    max-height: 100%; /* Add this line */
+    overflow: auto; /* Add this line */
+    text-align: justify;
+  }
+  
+  .thumb:hover .thumb__image img{
+    opacity: 0.5; /* Make the image transparent on hover */
+  }
+  
+  .thumb:hover .thumb-info {
+    opacity: 1; /* Show the info on hover */
+    transform: translate(-50%, -50%) rotateY(0deg); /* Rotate into view */
+  }
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--one);
+  color: var(--three);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer .container ul,.footer .container ul li{
+  text-decoration: underline;
+  list-style: none;
+}
+.footer .container ul a{
+  text-decoration: none !important;
+  color: var(--three);
+  cursor: pointer;
+}
+.footer .container ul a:hover{
+  color: var(--four);
+}
+.footer .container p{
+  text-align: center;
+  margin: -50px !important;
+  padding: 0;
+}
+
+.footer .container .logo{
+  text-align: center;
+}
+.footer .container .logo img{
+  height: 200px;
+  width: 100%;
+}
+.title-page .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.title-page .carousel-item{
+  height: 500px;
+  width: 100%;
+}
+.title-page .carousel-item img{
+  height: 500px;
+  object-fit: cover;
+}
+
+.title-page .title-info .opa{
+  opacity: 0.4;
+}
+
+.login .imgWrapper {
+  position: relative;
+  margin-top: -20px;
+  margin-left: -5px !important;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  z-index: 100;
+  max-width: 100%;
+}
+.login .imgWrapper a{
+  max-width: 100% !important;
+}
+.login .imgWrapper img{
+  height: 160px;
+  max-width: 100%;
+}
+.login .loginWrapper .login-slider{
+  position: relative;
+  height: 100vh !important;
+  padding: 0;
+}
+
+.loginWrapper{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.loginWrapper .login-slider{
+  height: 100vh;
+}
+
+.loginWrapper .carousel-indicators{
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.loginWrapper .carousel-control-next-icon, .loginWrapper .carousel-control-prev-icon {
+  height: 0 !important;
+  width: 0 !important; 
+}
+
+.loginWrapper .form-control {
+  background-color: #000;
+  color: var(--three);
+}
+
+/* Flex container to center the content */
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.signup::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://wallpapers.com/images/hd/movie-poster-background-p5qblffj7cvswl5g.jp'); /* Path to your background image */
+  background-size: cover; /* Ensure the image covers the whole area */
+  background-position: center; /* Center the background image */
+  opacity: 0.5; /* Set the opacity of the background image */
+  z-index: -1; /* Ensure the pseudo-element is behind the content */
+}
+/* Center the form and its content */
+.signupWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+/* Styling for the form container */
+.signup .form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the logo */
+.signup .imgWrapper {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup .imgWrapper img {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Styling for the form */
+.signup .form-container form {
+  width: 100%;
+}
+
+.signup .form-container h2 {
+  margin-bottom: 20px;
+}
+
+.signup .form-container .form-group {
+  margin-bottom: 15px;
+}
+
+.signup .form-container .form-control {
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #fff; /* Text color */
+  background-color: #000; /* Background color */
+  background-clip: padding-box;
+  border: 1px solid #ced4da; /* Border color */
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+/* Optional: Add focus styling */
+.signup .form-container .form-control:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .25); /* Optional: add shadow effect on focus */
+}
+
+.signup .form-container .btn {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  border-radius: .25rem;
+}
+
+.signup .form-container p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.volume-control {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.volume-slider:hover {
+    opacity: 1;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.search-results {
+    padding: 20px;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.results-grid .item-title{
+  opacity: 0;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.result-item .thumb .thumb-info h5{
+  text-align: center;
+}
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.result-item .thumb__image:hover p{
+z-index: -10;
+}
+
+.item-title {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
