@@ -7,7 +7,7 @@ import friendsvideo from '../assets/videos/friendsvid.mp4';
 
 const BigSlider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [volume, setVolume] = useState(0.25); // Initial volume set to 50%
+    const [volume, setVolume] = useState(0.25); 
     const videoRefs = useRef([]);
 
     useEffect(() => {
