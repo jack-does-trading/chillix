@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Narcos from "../assets/images/narcos.jpg"
-import { AuthContext } from '../context/AuthContext'; // We'll create this context
+import { AuthContext } from '../context/AuthContext'; 
 
 const Login = () => {
     const [username, setUsername] = useState('');

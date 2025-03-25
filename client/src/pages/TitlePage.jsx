@@ -11,7 +11,7 @@ const fetchMovieDetails = async (movieId) => {
 
 const TitlePage = () => {
     const [movieDetails, setMovieDetails] = useState(null);
-    const { id } = useParams(); // Assuming you're using react-router and passing the movie ID in the URL
+    const { id } = useParams();
 
     useEffect(() => {
         fetchMovieDetails(id).then(setMovieDetails);

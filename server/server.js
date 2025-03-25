@@ -9,20 +9,14 @@ const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
-// Connect to MongoDB
-connectDB();
 
-// Handle options credentials check - before CORS!
-// and fetch cookies credentials requirement
+connectDB();
 app.use(credentials);
 
-// Cross Origin Resource Sharing
+
 app.use(cors());
-// built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
-// built-in middleware for json 
 app.use(express.json());
-//middleware for cookies
 
 app.use(cookieParser());
 

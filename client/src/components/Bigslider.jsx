@@ -17,7 +17,7 @@ const BigSlider = () => {
                 video.play();
                 video.style.opacity = '1';
             }
-        }, 2500); // Delay video start and fade-in by 2.5 seconds
+        }, 2500);
 
         return () => clearTimeout(timer);
     }, [activeIndex]);
